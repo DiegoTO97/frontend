@@ -8,6 +8,8 @@ import { RegisterComponent } from './components/public/register/register.compone
 import { HomePageComponent } from './components/private/home-page/home-page.component';
 import { SharedModule } from './shared/shared.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
