@@ -1,1 +1,26 @@
-<p>home-page works!</p>
+<mat-toolbar class="menu">
+    <p>NTSprint Test</p>
+    <span class="spacerIcon"></span>
+    <ul>
+        <mat-icon  fontIcon="account_circle"></mat-icon>
+        <a routerLink="/login"> Login</a>
+    </ul>    
+    <ul>
+        <mat-icon  fontIcon="app_registration"></mat-icon>
+        <a routerLink="/register"> Registro</a>
+    </ul>
+</mat-toolbar>
+
+<div class="container"> 
+    <mat-card class="card">
+        <mat-card-subtitle>
+            WELCOME YOU ARE LOGIN! 
+        </mat-card-subtitle>
+        <form (ngSubmit)="logout()">
+            
+                    <mat-icon  fontIcon="logout"></mat-icon>
+                    <button  type="submit" mat-raised-button color="primary">Logout</button>
+              
+        </form>
+    </mat-card>
+</div>

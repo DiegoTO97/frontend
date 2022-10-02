@@ -31,11 +31,17 @@
                     </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile>
-                    <button [disabled]="form.invalid" type="submit" class="btnRegister" mat-raised-button
+                <a id="test" routerLink="/register"> New in the website?</a>
+            </mat-grid-tile>
+                <mat-grid-tile>
+                    <button [disabled]="form.invalid" type="submit" class="btnLogin" mat-raised-button
                         color="primary">Login</button>
                     <button mat-raised-button routerLink="/menu">Cancel</button>
                 </mat-grid-tile>
+                    
             </mat-grid-list>
         </form>
+
     </mat-card>
+
 </div>
