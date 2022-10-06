@@ -2,8 +2,13 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+import { registerLocaleData } from "@angular/common";
+import { Environment } from "./environment-definition";
+
+export const environment:Environment = {
+  production: false,
+  loginUri: 'https://localhost:44384',
+  registerUri: 'https://localhost:44384'
 };
 
 /*

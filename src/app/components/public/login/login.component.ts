@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -38,9 +39,9 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home']);
         alert("login");
       },
-      (error) => {
-        alert(error.responseJSON.message);
-        console.log(error);
+      (error: HttpErrorResponse) => {
+        alert(error.error.message);
+        console.log(error.error.message);
       }
     );
   }

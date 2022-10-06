@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   form: FormGroup 
-  private genderBand = 0;
+  public genderBand = 0;
 
   constructor(private auth: AuthService, private router: Router, private fb: FormBuilder) { 
     this.form = this.fb.group({
@@ -52,14 +53,19 @@ export class RegisterComponent implements OnInit {
     console.log(user);
 
     this.auth.registerUser(user).subscribe(
-      (res) => {
-        console.log(res);
+      (response: any) => {
+        console.log(response);
         this.router.navigate(['/menu']);
         alert("New user registered");
       },
-      (error) => {
-        alert(error.responseJSON.message);
-        console.log(error);
+      (error: HttpErrorResponse) => {
+        if(error.error.errors == null){
+          alert("The password must contain uppercase letter, lowercase letter, symbols and numbers.");
+        }
+        else {
+        alert(error.error.errors);
+        console.log(error.error.errors);
+      }
       }
     );
   }

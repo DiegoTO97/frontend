@@ -7,10 +7,6 @@
     margin: 5px;
 }
 
-.mat-radio-button ~ .mat-radio-button {
-    margin-left: 25px;
-}
-
 .btnRegister {
     margin-right: 5px;
 }

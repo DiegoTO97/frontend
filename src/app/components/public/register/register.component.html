@@ -17,45 +17,47 @@
             Register New User
         </mat-card-subtitle>
         <form [formGroup]="form" (ngSubmit)="register()">
-            <mat-grid-list cols="2" rowHeight="80px">
-                <mat-grid-tile [colspan]="2">
+            <mat-grid-list cols="4" rowHeight="80px">
+                <mat-grid-tile [colspan]="4">
                     <mat-form-field appearance="outline">
                         <mat-label>Full Name</mat-label>
                         <input formControlName="fullName" autocomplete="off" matInput>
                     </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
                         <input formControlName="password" type="password" autocomplete="off" matInput>
                     </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
                     <mat-form-field appearance="outline">
                         <mat-label>Confirmation Password</mat-label>
                         <input formControlName="confirmationPassword" type="password" autocomplete="off" matInput>
                     </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
                     <mat-form-field appearance="outline">
                         <mat-label>Email</mat-label>
                         <input formControlName="email" type="email" autocomplete="off" matInput>
                     </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
                     <mat-form-field appearance="outline">
                         <mat-label>Birthday</mat-label>
                         <input formControlName="birthday" type="date" autocomplete="off" matInput>
                     </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile>
+                <mat-grid-tile [colspan]="2">
                     <mat-form-field appearance="outline">
                         <mat-label>Phone</mat-label>
                         <input formControlName="phone" autocomplete="off" matInput>
                     </mat-form-field>
                 </mat-grid-tile>
-                <mat-grid-tile>
+                <mat-grid-tile [colspan]="1">
                     <mat-radio-button (click)="isMale()" value="0" checked> Male </mat-radio-button>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1">
                     <mat-radio-button (click)="isFemale()" value="1"> Female </mat-radio-button>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="2">
