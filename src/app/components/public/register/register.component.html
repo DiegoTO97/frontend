@@ -55,12 +55,18 @@
                     </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1">
-                    <mat-radio-button (click)="isMale()" value="0" checked> Male </mat-radio-button>
+                <div class="minicont">
+                    <mat-radio-button (click)="isMale()" value="0" checked> </mat-radio-button>
+                    <p class="rbtnlabel">Male</p>
+                </div>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1">
-                    <mat-radio-button (click)="isFemale()" value="1"> Female </mat-radio-button>
+                <div  class="minicont">
+                    <mat-radio-button (click)="isFemale()" value="1"></mat-radio-button>
+                    <p class="rbtnlabel">Female</p>
+                </div>
                 </mat-grid-tile>
-                <mat-grid-tile [colspan]="2">
+                <mat-grid-tile [colspan]="4">
                     <button [disabled]="form.invalid" type="submit" class="btnRegister" mat-raised-button
                         color="primary">Register</button>
                     <button mat-raised-button routerLink="/menu">Cancel</button>
